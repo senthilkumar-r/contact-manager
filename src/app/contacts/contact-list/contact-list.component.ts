@@ -10,7 +10,7 @@ import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
   providers: [ContactService]
 })
 export class ContactListComponent implements OnInit {
-  public displayedColumns = ['id', 'first_name', 'last_name', 'phone_number'];
+  public displayedColumns = ['full_name', 'phone_number'];
   public dataSource = new MatTableDataSource<Contact>();
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;

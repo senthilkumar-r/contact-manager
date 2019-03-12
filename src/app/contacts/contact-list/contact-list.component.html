@@ -1,6 +1,6 @@
 <div class="example-header">
   <mat-form-field>
-    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="search">
   </mat-form-field>
 </div>
 
@@ -15,16 +15,10 @@
     </ng-container>
 
 
-    <!-- First Name Column -->
-    <ng-container matColumnDef="first_name">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> First Name </mat-header-cell>
-      <mat-cell *matCellDef="let row"> {{row.first_name}} </mat-cell>
-    </ng-container>
-
-    <!-- Last Name Column -->
-    <ng-container matColumnDef="last_name">
-      <mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </mat-header-cell>
-      <mat-cell *matCellDef="let row"> {{row.last_name}} </mat-cell>
+    <!-- Full Name Column -->
+    <ng-container matColumnDef="full_name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Full Name </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.last_name +', ' + row.first_name}} </mat-cell>
     </ng-container>
 
     <!-- Phone Number Column -->
